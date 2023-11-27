@@ -1,0 +1,391 @@
+$color-text: #000;
+$color-small: #898989;
+$color-back: #fdf8eb;
+$color-white: #fff;
+$color-accent: #e40065;
+
+@mixin inner($w: 73%, $mw: 1170px) {
+    width: $w;
+    max-width: $mw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flex($j: space-between, $a: center) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $j;
+    align-items: $a;
+}
+@mixin h2_small {
+    color: $color-small;
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+@mixin h2_line {
+    content: "";
+    display: block;
+    width: 120px;
+    border: 1px solid;
+    color: $color-text;
+    margin-top: 30px;
+}
+
+@mixin content {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 150px;
+    padding-bottom: 160px;
+    padding-left: 80px;
+    width: 100%;
+    color: $color-white;
+}
+@mixin tag {
+    color: $color-white;
+    background-color: $color-accent;
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+body {
+    color: $color-text;
+    font-size: 14px;
+    font-family: "Helvetica", "Helvetica Neue", "Yu Gothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo",
+        sans-serif;
+    font-weight: 200;
+    line-height: (24/14);
+    letter-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    margin-top: 70px;
+    &__inner {
+        @include inner();
+        @include flex();
+    }
+    .nav {
+        &__list {
+            @include flex(right);
+        }
+
+        &__item a {
+            color: $color-text;
+            margin-left: 30px;
+        }
+    }
+}
+
+.mv {
+    margin-top: 100px;
+    img {
+        width: 100%;
+    }
+}
+
+.works {
+    margin: 100px 0;
+    &__inner {
+        @include inner();
+    }
+    &__title {
+        font-size: 38px;
+        font-weight: normal;
+        &::before {
+            content: "制作実績";
+            @include h2_small();
+        }
+        &::after {
+            @include h2_line();
+        }
+    }
+    &__text {
+        margin-top: 60px;
+    }
+    &__en-text {
+        margin-top: 40px;
+        font-style: italic;
+    }
+    &__list {
+        @include flex();
+    }
+}
+
+.card {
+    width: (370/1170) * 100%;
+    margin-top: 60px;
+    &__title {
+        font-size: 20px;
+        font-weight: normal;
+        margin-top: 30px;
+    }
+
+    &__category {
+        font-size: 12px;
+        color: $color-small;
+        margin-top: 15px;
+    }
+}
+
+.project {
+    margin: 100px 0;
+    padding: 100px 0;
+    background-color: $color-back;
+    &__inner {
+        @include inner();
+    }
+    &__title {
+        font-size: 38px;
+        font-weight: normal;
+        &::before {
+            content: "企画運営";
+            @include h2_small();
+        }
+        &::after {
+            @include h2_line();
+        }
+    }
+    &__text {
+        margin-top: 60px;
+    }
+    &__en-text {
+        margin-top: 40px;
+        font-style: italic;
+    }
+    &__list {
+        @include flex();
+    }
+}
+
+.post {
+    margin-top: 60px;
+    &__tag {
+        color: $color-white;
+        background-color: $color-accent;
+        display: inline-block;
+        padding: 5px 11px;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+    &__text {
+        margin-top: 30px;
+    }
+}
+
+.header {
+    margin-top: 70px;
+    &__inner {
+        @include inner();
+        @include flex();
+    }
+    .nav {
+        &__list {
+            @include flex(right);
+        }
+
+        &__item a {
+            color: $color-text;
+            margin-left: 30px;
+        }
+    }
+}
+
+.mv {
+    margin-top: 100px;
+    img {
+        width: 100%;
+    }
+}
+
+.works {
+    margin: 100px 0;
+    &__inner {
+        @include inner();
+    }
+    &__title {
+        font-size: 38px;
+        font-weight: normal;
+        &::before {
+            content: "制作実績";
+            @include h2_small();
+        }
+        &::after {
+            @include h2_line();
+        }
+    }
+    &__text {
+        margin-top: 60px;
+    }
+    &__en-text {
+        margin-top: 40px;
+        font-style: italic;
+    }
+    &__list {
+        @include flex();
+    }
+}
+
+.card {
+    width: (370/1170) * 100%;
+    margin-top: 60px;
+    &__title {
+        font-size: 20px;
+        font-weight: normal;
+        margin-top: 30px;
+    }
+
+    &__category {
+        font-size: 12px;
+        color: $color-small;
+        margin-top: 15px;
+    }
+
+    &__small {
+        font-size: 12px;
+        color: $color-small;
+        margin-top: 15px;
+    }
+    &__text {
+        margin-top: 40px;
+    }
+}
+
+.project {
+    margin: 100px 0;
+    padding: 100px 0;
+    background-color: $color-back;
+    &__inner {
+        @include inner();
+    }
+    &__title {
+        font-size: 38px;
+        font-weight: normal;
+        &::before {
+            content: "企画運営";
+            @include h2_small();
+        }
+        &::after {
+            @include h2_line();
+        }
+    }
+    &__text {
+        margin-top: 60px;
+    }
+    &__en-text {
+        margin-top: 40px;
+        font-style: italic;
+    }
+    &__list {
+        @include flex();
+    }
+}
+
+.post {
+    margin-top: 60px;
+    &__tag {
+        @include tag();
+    }
+    &__text {
+        margin-top: 30px;
+    }
+}
+
+.company {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    &__inner {
+        @include inner();
+    }
+    &__head {
+        @include flex(space-between, flex-start);
+    }
+    &__head-text {
+        width: (700/1170) * 100%;
+    }
+    &__title {
+        width: (360/1170) * 100%;
+        font-size: 38px;
+        font-weight: normal;
+        &::before {
+            content: "会社情報";
+            @include h2_small();
+        }
+        &::after {
+            @include h2_line();
+        }
+    }
+
+    &__en-text {
+        margin-top: 40px;
+        font-style: italic;
+    }
+    &__item {
+        margin-top: 60px;
+    }
+}
+
+.content01 {
+    background: url(../images/bg_project01.jpg);
+    @include content();
+}
+.content02 {
+    background: url(../images/bg_project02.jpg);
+    @include content();
+}
+
+.content {
+    &__tag {
+        @include tag();
+        margin-bottom: 30px;
+    }
+    &__caption {
+        font-size: 20px;
+        font-weight: 100;
+        margin-bottom: 40px;
+    }
+    &__list li {
+        font-weight: 100;
+        margin-top: 15px;
+    }
+}
+
+.menu {
+    background-color: $color-back;
+    padding: 100px 0;
+    &__inner {
+        @include inner();
+    }
+
+    &__list {
+        @include flex();
+    }
+}
+.footer {
+    padding: 80px 0 200px;
+    text-align: right;
+    &__inner {
+        @include inner();
+    }
+    &__small {
+        font-size: 12px;
+        color: $color-small;
+    }
+}
